@@ -1,0 +1,33 @@
+# Node modules
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Optional: ignore compiled templates or public build files (if any)
+dist/
+build/
+
+# Optional: ignore IDE/editor settings
+.vscode/
+.idea/
+
+# Optional: ignore coverage reports (if using testing tools like Jest later)
+coverage/
+
+# Optional: ignore uploads or other user-generated content
+uploads/
+
+# Optional: ignore Express session files if using session file store
+sessions/
