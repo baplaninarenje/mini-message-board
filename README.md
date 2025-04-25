@@ -29,3 +29,7 @@ This app demonstrates foundational Express.js concepts including routing, middle
 ## 📁 Project req:
 
 https://www.theodinproject.com/lessons/node-path-nodejs-mini-message-board
+
+## Access application over HTTP:
+
+https://mini-message-board-production-0b18.up.railway.app/
