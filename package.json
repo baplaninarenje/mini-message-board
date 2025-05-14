@@ -3,12 +3,15 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node models/populatedb.js PROD_DB_URL && node app.js PROD_DB_URL",
+    "start:dev": "node models/populatedb.js LOCAL_DB_URL && node --watch app.js LOCAL_DB_URL",
+    "db:populate": "node models/populatedb.js"
   },
   "dependencies": {
+    "dotenv": "^16.5.0",
     "ejs": "^3.1.10",
     "express": "^5.1.0",
     "express-ejs-layouts": "^2.5.1",
-    "uuid": "^11.1.0"
+    "pg": "^8.16.0"
   }
 }

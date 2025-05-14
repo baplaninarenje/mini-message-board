@@ -1,35 +1,22 @@
-const { v4: uuidv4 } = require('uuid');
-
-const messages = [
-  {
-    id: uuidv4(),
-    text: 'Hi there!',
-    user: 'Amando',
-    added: new Date(),
-  },
-  {
-    id: uuidv4(),
-    text: 'Hello World!',
-    user: 'Charles',
-    added: new Date(),
-  },
-];
+const pool = require('./pool');
 
 async function getMessages() {
-  return messages;
+  const { rows } = await pool.query('SELECT * FROM messages');
+  return rows;
 }
 
 async function postMessage(messageText, messageUser) {
-  messages.push({
-    id: uuidv4(),
-    text: messageText,
-    user: messageUser,
-    added: new Date(),
-  });
+  await pool.query('INSERT INTO messages (text, username) VALUES ($1, $2)', [
+    messageText,
+    messageUser,
+  ]);
 }
 
 async function getMessageById(messageId) {
-  return messages.find((message) => message.id === messageId);
+  const { rows } = await pool.query('SELECT * FROM messages WHERE id = $1', [
+    messageId,
+  ]);
+  return rows[0] || null;
 }
 
 module.exports = { getMessages, postMessage, getMessageById };

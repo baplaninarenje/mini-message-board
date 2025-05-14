@@ -2,7 +2,7 @@
 <ul>
   <% messages.forEach(function(message) { %>
   <li>
-    <strong><%= message.user %></strong> - <%= message.text %><br />
+    <strong><%= message.username %></strong> - <%= message.text %><br />
     <small><%= message.added.toLocaleString() %></small>
     <!-- Open message link -->
     <a href="/message/<%= message.id %>">Open</a>
