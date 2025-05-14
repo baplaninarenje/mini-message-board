@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "start": "DB_URL=$PROD_DB_URL node models/populatedb.js DB_URL && DB_URL=$PROD_DB_URL node app.js DB_URL",
+    "start": "node models/populatedb.js PROD_DB_URL && node app.js PROD_DB_URL",
     "start:dev": "node models/populatedb.js LOCAL_DB_URL && node --watch app.js LOCAL_DB_URL",
     "db:populate": "node models/populatedb.js"
   },
