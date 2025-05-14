@@ -3,5 +3,5 @@ const { Pool } = require('pg');
 const { argv } = require('node:process');
 
 module.exports = new Pool({
-  connectionString: process.env.PROD_DB_URL,
+  connectionString: process.env.DATABASE_URL,
 });
