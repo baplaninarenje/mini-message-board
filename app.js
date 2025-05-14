@@ -29,5 +29,3 @@ const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`App - listening on port ${PORT}!`);
 });
-
-// "start:dev": "node models/populatedb.js LOCAL_DB_URL && node --watch app.js LOCAL_DB_URL",
