@@ -15,7 +15,8 @@ async function main() {
   try {
     console.log('seeding...');
     const client = new Client({
-      connectionString: process.env[argv[2]],
+      connectionString:
+        'postgresql://postgres:jsWokCCtlsmcBYZHPDKPoERGllOAuriB@metro.proxy.rlwy.net:32002/railway', //process.env[argv[2]],
     });
     await client.connect();
     await client.query(SQL);
