@@ -15,7 +15,7 @@ async function main() {
   try {
     console.log('seeding...');
     const client = new Client({
-      connectionString: process.env.PROD_DB_URL, //process.env[argv[2]],
+      connectionString: process.env[argv[2]],
     });
     await client.connect();
     await client.query(SQL);
