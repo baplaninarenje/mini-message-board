@@ -4,7 +4,6 @@
   "main": "app.js",
   "scripts": {
     "start": "node models/populatedb.js && node app.js",
-    "start:dev": "node models/populatedb.js LOCAL_DB_URL && node --watch app.js LOCAL_DB_URL",
     "db:populate": "node models/populatedb.js"
   },
   "dependencies": {
