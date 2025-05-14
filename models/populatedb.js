@@ -14,7 +14,7 @@ async function main() {
   try {
     console.log('seeding...');
     const client = new Client({
-      connectionString: process.env.DATABASE_PUBLIC_URL,
+      connectionString: process.env.DATABASE_URL,
     });
     await client.connect();
     await client.query(SQL);
